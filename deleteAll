@@ -1,0 +1,3 @@
+kubectl delete deploy/kube-node
+kubectl delete svc kube-node
+
