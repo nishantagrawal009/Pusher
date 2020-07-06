@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - image: kube:v1
-          name: kube-node
+          name: kube-study
           imagePullPolicy: Never
           resources: {}
           ports:
