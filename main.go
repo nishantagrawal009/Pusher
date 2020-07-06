@@ -64,7 +64,7 @@ func usesAResource() {
 func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w,"/")
+		fmt.Fprintf(w,"/welcome")
 	})
 
 	http.HandleFunc("/hi", func(w http.ResponseWriter, r *http.Request){

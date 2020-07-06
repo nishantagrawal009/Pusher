@@ -1,7 +1,0 @@
-kubectl delete deploy/kube-node
-kubectl delete svc kube-node
-docker build .  -t kube:v1
-kubectl run kube-node --image=kube:v1 --port=8080
-kubectl expose deployment kube-node --type=LoadBalancer
-minikube service kube-node
-

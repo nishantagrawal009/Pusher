@@ -1,0 +1,7 @@
+kubectl delete deploy/kube-study
+kubectl delete svc kube-study
+docker build .  -t kube:v1
+kubectl apply -f manifest.yml
+kubectl expose deployment kube-study --type=LoadBalancer
+minikube service kube-study
+

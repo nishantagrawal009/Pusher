@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kube-study
+  name: kube-study
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: kube-study
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kube-study
+    spec:
+      containers:
+        - image: kube:v1
+          name: kube-node
+          imagePullPolicy: Never
+          resources: {}
+          ports:
+            - containerPort: 8080
+status: {}
