@@ -17,7 +17,7 @@ import (
 
 const(
 	defaultDuration     = 10 * time.Second
-	defaultTickInterval = time.Minute
+	defaultTickInterval = 10*time.Second
 	defaultProfileType = TypeCPU
 )
 type httpClient interface {
@@ -50,6 +50,7 @@ func New(addr, service string) *Agent {
 		GoroutineProfile :        true,
 		ThreadcreateProfile :        true,
 		collectorAddr: addr,
+		CPUProfileDuration:defaultDuration,
 		service:       service,
 		tick: defaultTickInterval,
 		rawClient: http.DefaultClient,
@@ -78,6 +79,7 @@ func (a *Agent) Stop() error {
 func (a *Agent) collectAndSend(ctx context.Context) {
 	defer close(a.done)
 
+
 	ctx, cancel := context.WithCancel(ctx)
 	go func() {
 		<-a.stop
@@ -90,7 +92,11 @@ func (a *Agent) collectAndSend(ctx context.Context) {
 
 		buf bytes.Buffer
 	)
-
+	if err := a.collectProfile(ctx, ptype, &buf); err != nil {
+		fmt.Errorf("failed to collectProfile: %v", err)
+	} else if err := a.sendProfile(ctx, ptype, &buf); err != nil {
+		fmt.Errorf("failed to sendProfile: %v", err)
+	}
 	for {
 		select {
 		case <-a.stop:
@@ -100,9 +106,9 @@ func (a *Agent) collectAndSend(ctx context.Context) {
 			return
 		case <-timer.C:
 			if err := a.collectProfile(ctx, ptype, &buf); err != nil {
-
+				fmt.Errorf("failed to collectProfile: %v", err)
 			} else if err := a.sendProfile(ctx, ptype, &buf); err != nil {
-
+				fmt.Errorf("failed to sendProfile: %v", err)
 			}
 
 			buf.Reset()
@@ -208,7 +214,10 @@ func (a *Agent) sendProfile(ctx context.Context, ptype ProfileType, buf *bytes.B
 	}
 	req = req.WithContext(ctx)
 
-	a.doRequest(req, nil)
+	err = a.doRequest(req, nil)
+	if err != nil {
+		fmt.Printf("error while sending the file",err)
+	}
 	return  nil
 }
 func (a *Agent) doRequest(req *http.Request, v io.Writer) error {

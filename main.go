@@ -2,10 +2,10 @@ package main
 
 import (
 	"fmt"
+	"kube/agent"
 	"log"
 	"net/http"
 	_ "net/http/pprof"
-
 )
 
 
@@ -15,7 +15,7 @@ func main() {
 		fmt.Fprintf(w,"/welcome")
 	})
 
-
+	go agent.StartAgent()
 
 	log.Println("running!")
 
