@@ -88,15 +88,11 @@ func (a *Agent) collectAndSend(ctx context.Context) {
 
 	var (
 		ptype = a.nextProfileType(TypeUnknown)
-		timer = time.NewTimer(tickInterval(0))
+		timer = time.NewTimer(tickInterval(1))
 
 		buf bytes.Buffer
 	)
-	if err := a.collectProfile(ctx, ptype, &buf); err != nil {
-		fmt.Errorf("failed to collectProfile: %v", err)
-	} else if err := a.sendProfile(ctx, ptype, &buf); err != nil {
-		fmt.Errorf("failed to sendProfile: %v", err)
-	}
+
 	for {
 		select {
 		case <-a.stop:
@@ -216,7 +212,7 @@ func (a *Agent) sendProfile(ctx context.Context, ptype ProfileType, buf *bytes.B
 
 	err = a.doRequest(req, nil)
 	if err != nil {
-		fmt.Printf("error while sending the file",err)
+		fmt.Println("error while sending the file",err)
 	}
 	return  nil
 }

@@ -8,5 +8,4 @@ func StartAgent() {
 
 	agent.Start(context.Background())
 
-	defer agent.Stop()
 }
