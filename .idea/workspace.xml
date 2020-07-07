@@ -84,10 +84,10 @@
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594120567052">
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594125891160">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594120567052" />
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594125891160" />
     <state width="1440" height="252" key="GridCell.Tab.0.bottom" timestamp="1594125767000">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
