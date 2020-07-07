@@ -6,7 +6,7 @@ metadata:
     app: kube-study
   name: kube-study
 spec:
-  replicas: 5
+  replicas: 2
   selector:
     matchLabels:
       app: kube-study
@@ -18,7 +18,7 @@ spec:
         app: kube-study
     spec:
       containers:
-        - image: kube:v1
+        - image: kube:latest
           name: kube-study
           imagePullPolicy: Never
           resources: {}
