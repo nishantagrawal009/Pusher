@@ -1,20 +1,27 @@
-FROM golang:1.12.0-alpine3.9
-# We create an /app directory within our
-# image that will hold our application source
-# files
-RUN mkdir /app
-# We copy everything in the root directory
-# into our /app directory
-ADD . /app
-# We specify that we now wish to execute
-# any further commands inside our /app
-# directory
+FROM golang:1.12 as builder
+
+# Set Environment Variables
+ENV HOME /app
+ENV CGO_ENABLED 0
+ENV GOOS linux
+
 WORKDIR /app
-# we run go build to compile the binary
-# executable of our Go program
-RUN go build -o main .
-# Our start command which kicks off
-# our newly created binary executable
+COPY go.mod go.sum ./
+RUN go mod download
+COPY . .
+
+# Build app
+RUN go build -a -installsuffix cgo -o main .
+
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
+WORKDIR /root/
+
+# Copy the pre-built binary file from the previous stage
+COPY --from=builder /app/main .
+
 EXPOSE 8080
 
-CMD ["/app/main"]
+CMD [ "./main" ]
