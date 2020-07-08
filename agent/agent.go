@@ -17,7 +17,7 @@ import (
 
 const(
 	defaultDuration     = 10 * time.Second
-	defaultTickInterval = 10*time.Second
+	defaultTickInterval = 1 *time.Minute
 	defaultProfileType = TypeCPU
 )
 type httpClient interface {
@@ -88,7 +88,7 @@ func (a *Agent) collectAndSend(ctx context.Context) {
 
 	var (
 		ptype = a.nextProfileType(TypeUnknown)
-		timer = time.NewTimer(tickInterval(1))
+		timer = time.NewTimer(tickInterval(0))
 
 		buf bytes.Buffer
 	)

@@ -1,11 +1,14 @@
 package agent
 
-import "context"
+import  (
+	"context"
+)
 
-func StartAgent() {
+func StartAgent(callback func()) {
 
-	agent := New("http://localhost:8081","collector")
+	agent := New("http://localhost:8081","pusher-service")
 
 	agent.Start(context.Background())
 
+	callback()
 }
