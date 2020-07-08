@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e2f3a3-4a1d-4449-9f5f-7c9cdad9e7f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kube" beforeDir="false" afterPath="$PROJECT_DIR$/kube" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,6 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
   <component name="ProjectId" id="1eJdndQgHujja3vw1SPotJqEywd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,36 +38,103 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/agent" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/agent" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build main.go">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="kube-study" />
       <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/main.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+    <configuration name="Test_test in kube/agent" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="kube-study" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
+      <working_directory value="$PROJECT_DIR$/agent" />
       <framework value="gotest" />
-      <kind value="DIRECTORY" />
+      <kind value="PACKAGE" />
+      <package value="kube/agent" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_test$" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build main.go" />
+        <item itemvalue="Go Test.Test_test in kube/agent" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>direct</proxy>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594112110653">
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594144231082">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594112110653" />
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594144231082" />
+    <state width="1440" height="252" key="GridCell.Tab.0.bottom" timestamp="1594126128239">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="252" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594126128239" />
+    <state width="1440" height="252" key="GridCell.Tab.0.center" timestamp="1594126128237">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="252" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594126128237" />
+    <state width="1440" height="252" key="GridCell.Tab.0.left" timestamp="1594126128236">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="252" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594126128236" />
+    <state width="1440" height="252" key="GridCell.Tab.0.right" timestamp="1594126128238">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="252" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594126128238" />
+    <state width="1440" height="312" key="GridCell.Tab.1.bottom" timestamp="1594124374218">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="312" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594124374218" />
+    <state width="1440" height="312" key="GridCell.Tab.1.center" timestamp="1594124374217">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="312" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1594124374217" />
+    <state width="1440" height="312" key="GridCell.Tab.1.left" timestamp="1594124374216">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="312" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1594124374216" />
+    <state width="1440" height="312" key="GridCell.Tab.1.right" timestamp="1594124374217">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1440" height="312" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1594124374217" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../src/github.com/profefe/profefe/agent/agent.go</url>
+          <line>36</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/../../src/github.com/profefe/profefe/agent/agent.go</url>
+          <line>215</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
