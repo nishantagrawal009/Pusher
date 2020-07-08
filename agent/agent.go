@@ -198,16 +198,19 @@ func (a *Agent) collectProfile(ctx context.Context, ptype ProfileType, buf *byte
 }
 
 func (a *Agent) sendProfile(ctx context.Context, ptype ProfileType, buf *bytes.Buffer) error {
+	// sending the testing data
 	q := url.Values{}
 	q.Set("service", a.service)
-	q.Set("labels", a.rawLabels.String())
+	q.Set("labels", "version=1.0.0")
 	q.Set("type", ptype.String())
 
 	surl := a.collectorAddr + "/api/0/profiles?" + q.Encode()
+
 	req, err := http.NewRequest(http.MethodPost, surl, buf)
 	if err != nil {
 		return err
 	}
+
 	req = req.WithContext(ctx)
 
 	err = a.doRequest(req, nil)
