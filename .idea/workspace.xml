@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f8e2f3a3-4a1d-4449-9f5f-7c9cdad9e7f5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runAll" beforeDir="false" afterPath="$PROJECT_DIR$/runAll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kube" beforeDir="false" afterPath="$PROJECT_DIR$/kube" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +84,10 @@
     <proxy>direct</proxy>
   </component>
   <component name="WindowStateProjectService">
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594125891160">
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594144231082">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594125891160" />
+    <state x="441" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594144231082" />
     <state width="1440" height="252" key="GridCell.Tab.0.bottom" timestamp="1594126128239">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -16,7 +16,7 @@ func main() {
 	})
 
 	go agent.StartAgent()
-
+	simulate()
 	log.Println("running!")
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
