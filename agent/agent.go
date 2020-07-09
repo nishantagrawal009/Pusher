@@ -13,12 +13,19 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	guuid "github.com/google/uuid"
+
 )
 
 const(
 	defaultDuration     = 10 * time.Second
 	defaultTickInterval = 1 *time.Minute
 	defaultProfileType = TypeCPU
+
+)
+var(
+	podId 			   = ""
 )
 type httpClient interface {
 	Do(req *http.Request) (*http.Response, error)
@@ -203,6 +210,7 @@ func (a *Agent) sendProfile(ctx context.Context, ptype ProfileType, buf *bytes.B
 	q.Set("service", a.service)
 	q.Set("labels", "version=1.0.0")
 	q.Set("type", ptype.String())
+	q.Set("podId", getPodId())
 
 	surl := a.collectorAddr + "/api/0/profiles?" + q.Encode()
 
@@ -273,4 +281,10 @@ func sleep(d time.Duration, cancel <-chan struct{}) {
 	}
 
 	timersPool.Put(timer)
+}
+func getPodId() string {
+	if podId == "" {
+		podId = guuid.New().String()
+	}
+	return podId
 }

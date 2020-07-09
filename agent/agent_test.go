@@ -9,6 +9,8 @@ import (
 	"net/http"
 	"net/url"
 	"testing"
+
+	guuid "github.com/google/uuid"
 )
 var(
 	buf bytes.Buffer
@@ -59,4 +61,9 @@ func TestAgent_Start(t *testing.T) {
 		fmt.Println(err)
 		return
 	}
+}
+
+func TestGenerate_UUID(t *testing.T) {
+	podId = guuid.New().String()
+	fmt.Println(podId)
 }
